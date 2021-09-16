@@ -1,2 +1,2 @@
-# Proyecto Contando Dedod
+# Proyecto Contando Dedos
 
