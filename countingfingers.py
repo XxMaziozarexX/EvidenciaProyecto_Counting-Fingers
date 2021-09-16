@@ -3,7 +3,10 @@ import numpy as np
 import imutils
 
 #cap = cv2.VideoCapture(0,cv2.CAP_DSHOW)
-cap = cv2.VideoCapture('videoEntrada.mp4')
+#Parámetro para utilizar video: 'videoEntrada.mp4'
+#Parámetro para utilizar cámara: 0
+cap = cv2.VideoCapture(0)
+
 bg = None
 
 # COLORES PARA VISUALIZACIÓN
