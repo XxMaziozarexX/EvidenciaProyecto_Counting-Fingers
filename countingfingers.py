@@ -140,7 +140,7 @@ while True:
     k = cv2.waitKey(20)
     if k == ord('i'):
         bg = cv2.cvtColor(frameAux,cv2.COLOR_BGR2GRAY)
-    if k == 27:
+    if cv2.waitKey(1) & 0xFF == ord('q'):
         break
     
 cap.release()
