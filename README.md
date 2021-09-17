@@ -1,5 +1,5 @@
 # Proyecto Contando Dedos
-Programa que cuenta dedos levantados utilizando defectos de convexidad.
+Programa que cuenta dedos levantados utilizando defectos de convexidad. Este codigo que ademas de que utiliza Computer Vision para poder visualizar donde esta la mano, tambien lo utliza mientras detecta cuantos dedos tiene alzado el usuario
 
 REQUISITOS:
 1. Tener instalado Python 3.9 (o alguna versión de Python y tener pip instalado)
