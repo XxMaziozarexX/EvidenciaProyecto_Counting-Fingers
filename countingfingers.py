@@ -140,6 +140,9 @@ while True:
     k = cv2.waitKey(20)
     if k == ord('i'):
         bg = cv2.cvtColor(frameAux,cv2.COLOR_BGR2GRAY)
+    if cv2.waitKey(1) & 0xFF == ord('y'): # guardar frame presionando 'y'
+        cv2.imshow('img1',frame) # muestra la imagen
+        cv2.imwrite('images/c1.png',frame)
     if cv2.waitKey(1) & 0xFF == ord('q'):
         break
     
