@@ -3,7 +3,7 @@ import numpy as np
 import imutils
 
 #cap = cv2.VideoCapture(0,cv2.CAP_DSHOW)
-#Parámetro para utilizar video: 'videoEntradaFinal.mp4'
+#Parámetro para utilizar video: 'videoEntrada.mp4'
 #Parámetro para utilizar cámara: 0
 cap = cv2.VideoCapture(0)
 
@@ -32,6 +32,9 @@ while True:
     frame = imutils.resize(frame,width=640)
     frame = cv2.flip(frame,1)
     frameAux = frame.copy()
+    #Añadir instrucciones de funcionamiento al despelgar la camara
+    cv2.putText(frame, 'Presione la tecla I y ponga', (120,400),1,2,(color_fingers),2,cv2.LINE_AA)
+    cv2.putText(frame, 'su mano en el recuadro', (120,425),1,2,(color_fingers),2,cv2.LINE_AA)
     
     if bg is not None:
 
@@ -87,7 +90,7 @@ while True:
                     end = cnt[e][0]
                     far = cnt[f][0]
 
-                    # Encontrar el triángulo asociado a cada defecto convexo para determinar ángulo					
+                    # Encontrar el triángulo asociado a cada defecto convexo para determinar ángulo                 
                     a = np.linalg.norm(far-end)
                     b = np.linalg.norm(far-start)
                     c = np.linalg.norm(start-end)
@@ -143,7 +146,7 @@ while True:
     if cv2.waitKey(1) & 0xFF == ord('y'): # guardar frame presionando 'y'
         cv2.imshow('img1',frame) # muestra la imagen
         cv2.imwrite('images/c1.png',frame)
-    if cv2.waitKey(1) & 0xFF == ord('q'):
+    if cv2.waitKey(1) & 0xFF == ord('q'): # cerrar las ventanas y terminar el programa
         break
     
 cap.release()
